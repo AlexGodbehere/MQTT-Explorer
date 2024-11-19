@@ -62,13 +62,13 @@ function renderRawMode(
   return (
     <div>
       {renderDiff(treeNode, compareWithPreviousMessage, currentStr, currentStr, undefined, currentType)}
-      <Fade in={Boolean(compareStr)} timeout={400}>
-        <div>
-          {Boolean(compareStr)
-            ? renderDiff(treeNode, compareWithPreviousMessage, compareStr, compareStr, 'selected', compareType)
-            : null}
-        </div>
-      </Fade>
+      {/*<Fade in={Boolean(compareStr)} timeout={400}>*/}
+      {/*  <div>*/}
+      {/*    {Boolean(compareStr)*/}
+      {/*      ? renderDiff(treeNode, compareWithPreviousMessage, compareStr, compareStr, 'selected', compareType)*/}
+      {/*      : null}*/}
+      {/*  </div>*/}
+      {/*</Fade>*/}
     </div>
   )
 }

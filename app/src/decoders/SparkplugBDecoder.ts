@@ -11,10 +11,35 @@ export const SparkplugDecoder: MessageDecoder = {
   },
   decode(input) {
     try {
+      // @ts-ignore
+      const data = sparkplug.decodePayload(new Uint8Array(input.toBuffer()));
+
+      // For every value (including nested), see if it's a Long and run
+      // .toString() on it
+
+
+      // @ts-ignore
+      data.unixTimestamp = data.timestamp.toString();
+      // @ts-ignore
+      data.timestamp = new Date(Number.parseInt(data.unixTimestamp));
+      // @ts-ignore
+      data.metrics.forEach((metric) => {
+        // @ts-ignore
+        metric.unixTimestamp = metric.timestamp.toString();
+        // @ts-ignore
+        metric.timestamp = new Date(Number.parseInt(metric.unixTimestamp));
+        // @ts-ignore
+        metric.alias = metric.alias.toString();
+      });
+      // @ts-ignore
+      data.seq = data.seq.toString();
+
+      console.log(data);
+
       const message = Base64Message.fromString(
         JSON.stringify(
           // @ts-ignore
-          sparkplug.decodePayload(new Uint8Array(input.toBuffer()))
+          data
         )
       )
       return { message, decoder: Decoder.SPARKPLUG }
