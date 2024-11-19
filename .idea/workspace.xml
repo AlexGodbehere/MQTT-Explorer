@@ -118,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732014798111</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Tweak build">
+      <option name="closed" value="true" />
+      <created>1732015191061</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732015191061</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +157,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix long decoding and give human readable timestamps" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix long decoding and give human readable timestamps" />
+    <MESSAGE value="Tweak build" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tweak build" />
   </component>
 </project>
